@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Final Project Dashboard">
+    <title>Admin Dashboard</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    <!-- Defer script to avoid render blocking -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" aria-label="Sidebar Navigation">
+            <div class="logo">DashboardPro</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#" aria-current="page">Overview</a></li>
+                    <li><a href="#">Users</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main id="main-content" class="main-content">
+            <header class="topbar">
+                <h1>Users Overview</h1>
+                <div class="user-profile" aria-label="User profile">
+                    <img src="https://ui-avatars.com/api/?name=Admin&background=0D8ABC&color=fff" alt="Admin Avatar" width="40" height="40" loading="eager" fetchpriority="high">
+                </div>
+            </header>
+
+            <!-- Dashboard Stats -->
+            <section class="stats-grid" aria-label="Quick Statistics">
+                <div class="stat-card">
+                    <h3>Total Users</h3>
+                    <p id="total-users">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Active Users</h3>
+                    <p id="active-users">0</p>
+                </div>
+            </section>
+
+            <!-- Data Table with filtering -->
+            <section class="table-section" aria-labelledby="table-heading">
+                <div class="table-header">
+                    <h2 id="table-heading">User Directory</h2>
+                    <label for="search-input" class="sr-only">Search users</label>
+                    <input type="text" id="search-input" placeholder="Search by name or role..." aria-label="Search users by name or role">
+                </div>
+                <div class="table-responsive">
+                    <table id="data-table">
+                        <thead>
+                            <tr>
+                                <th scope="col"><button type="button" data-sort="id">ID</button></th>
+                                <th scope="col"><button type="button" data-sort="name">Name</button></th>
+                                <th scope="col"><button type="button" data-sort="role">Role</button></th>
+                                <th scope="col"><button type="button" data-sort="status">Status</button></th>
+                                <th scope="col"><button type="button" data-sort="lastLogin">Last Login</button></th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body">
+                            <!-- Rows rendered dynamically by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

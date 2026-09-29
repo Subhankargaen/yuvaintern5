@@ -1,0 +1,7 @@
+[
+  { "id": 1, "name": "Alice Johnson", "role": "Admin", "status": "Active", "lastLogin": "2026-09-28" },
+  { "id": 2, "name": "Bob Smith", "role": "User", "status": "Inactive", "lastLogin": "2026-09-15" },
+  { "id": 3, "name": "Charlie Davis", "role": "Editor", "status": "Active", "lastLogin": "2026-09-29" },
+  { "id": 4, "name": "Diana Prince", "role": "User", "status": "Active", "lastLogin": "2026-09-27" },
+  { "id": 5, "name": "Evan Wright", "role": "Admin", "status": "Inactive", "lastLogin": "2026-08-30" }
+]
